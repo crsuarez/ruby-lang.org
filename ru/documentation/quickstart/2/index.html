@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ruby: Ruby in twenty minutes (2/4)</title>
+  <title>Ruby: Ruby за двадцать минут (2/4)</title>
   <meta name="author" content="Ruby">
   
 
@@ -16,7 +16,7 @@
 
   
 
-  <link rel="canonical" href="http://www.ruby-lang.org/en/documentation/quickstart/2/index.html"/>
+  <link rel="canonical" href="http://www.ruby-lang.org/ru/documentation/quickstart/2/index.html"/>
   <link href="/ruby-lang.org/favicon.png" rel="shortcut icon" />
   <link href="/ruby-lang.org/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/ruby-lang.org/javascripts/modernizr-2.0.js"></script>
@@ -59,22 +59,8 @@
     <nav role=navigation>
 
 
-<a class="to-home" href="/ruby-lang.org/en"><img class="logo" src="/ruby-lang.org/images/ruby.png" /></a>
+<a class="to-home" href="/ruby-lang.org/ru"><img class="logo" src="/ruby-lang.org/images/ruby.png" /></a>
 <ul role=main-navigation>
-  
-  <li><a href="/ruby-lang.org/en/downloads/">Downloads</a></li>
-  
-  <li><a href="/ruby-lang.org/en/documentation/">Documentation</a></li>
-  
-  <li><a href="/ruby-lang.org/en/libraries/">Libraries</a></li>
-  
-  <li><a href="/ruby-lang.org/en/community/">Community</a></li>
-  
-  <li><a href="/ruby-lang.org/en/news/">News</a></li>
-  
-  <li><a href="/ruby-lang.org/en/security/">Security</a></li>
-  
-  <li><a href="/ruby-lang.org/en/about/">About Ruby</a></li>
   
 </ul>
 
@@ -90,7 +76,7 @@
     <a href="/ruby-lang.org/fr/documentation/quickstart/2/index.html">fr</a>
     
   </div>
-  <a href="/ruby-lang.org/en"></a>
+  <a href="/ruby-lang.org/ru"></a>
 </hgroup>
 
 </header>
@@ -99,9 +85,9 @@
       <div>
 <article>
   <header>
-    <h1 class="entry-title">Ruby in twenty minutes (2/4)</h1>
+    <h1 class="entry-title">Ruby за двадцать минут (2/4)</h1>
   </header>
-  <p>What if we want to say “Hello” a lot without getting our fingers all tired? We need to define a method!</p>
+  <p>Что если вы хотите сказать “Hello” множество раз, без насилования ваших пальцев? Нам нужно определить метод!</p>
 
 <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
 <span class='line'>2</span>
@@ -113,13 +99,15 @@
 </div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
 </div></code></pre></td></tr></table></div>
 
-<p>The code <code>def h</code> starts the definition of the method. It tells Ruby that
-we’re defining a method, that its name is <code>h</code>. The next line is the body of
-the method, the same line we saw earlier: <code>puts "Hello World"</code>. Finally, the last line <code>end</code> tells Ruby we’re done defining the method. Ruby’s response <code>=&gt; nil</code> tells us that it knows we’re done defining the method.</p>
+<p>Код <code>def h</code> начинается с определения метода. Он говорит Ruby что, что мы
+определяем метод, который называется <code>h</code>. Следующая строка является телом
+нашего метода, мы уже видили ее раньше: <code>puts "Hello World"</code>. И наконец, последняя строка <code>end</code> передает Ruby, то, что мы закончили
+определение метода.
+Ruby возвращает нам <code>=&gt; nil</code>, имея ввиду что он знает, что мы закончили определять метод.</p>
 
-<h2>The Brief, Repetitive Lives of a Method</h2>
+<h2>Инструкция, Повторная жизнь Метода</h2>
 
-<p>Now let’s try running that method a few times:</p>
+<p>Теперь давайте попробуем запустить этот метод несколько раз:</p>
 
 <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
 <span class='line'>2</span>
@@ -135,10 +123,11 @@ the method, the same line we saw earlier: <code>puts "Hello World"</code>. Final
 </div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
 </div></code></pre></td></tr></table></div>
 
-<p>Well, that was easy. Calling a method in Ruby is as easy as just mentioning its name to Ruby. If the method doesn’t take parameters
-that’s all you need. You can add empty parentheses if you’d like, but they’re not needed.</p>
+<p>Что-ж, это было очень легко, правда? Вызывать метод из Ruby это так же просто как и назначить ему имя в Ruby. Если метод не передает никаких
+параметров, это все что вам нужно. Вы конечно, можете добавить скобки, если вам очень прям таки этого хочется, но в
+них нет никакой необходимости.</p>
 
-<p>What if we want to say hello to one person, and not the whole world? Just redefine <code>h</code> to take a name as a parameter.</p>
+<p>Но, что же если мы хотим сказать привет только одному человеку, а не всему миру? Просто переопределите <code>h</code> добавив <code>name</code> как параметр.</p>
 
 <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
 <span class='line'>2</span>
@@ -156,11 +145,12 @@ that’s all you need. You can add empty parentheses if you’d like, but they�
 </div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
 </div></code></pre></td></tr></table></div>
 
-<p>So it works… but let’s take a second to see what’s going on here.</p>
+<p>Великолепно, это работает&#8230; но давайте разберемся, что же здесь происходит.</p>
 
-<h2>Holding Spots in a String</h2>
+<h2>Определение в строку</h2>
 
-<p>What’s the <code>#{name}</code> bit? That’s Ruby’s way of inserting something into a string. The bit between the braces is turned into a string (if it isn’t one already) and then substituted into the outer string at that point. You can also use this to make sure that someone’s name is properly capitalized:</p>
+<p>Что за <code>#{name}</code>? Ruby таким образом вставляет интерпретируемый код в строку. Переменная между двух фигурных скобок вставляется в нужном вам месте, далее Ruby преобразовывает значение переменной <code>name</code> в <code>String</code>.
+Как раз этим вы можете воспользоваться для того чтобы быть уверенным, что имя всегда отображается с заглавной буквы.</p>
 
 <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
 <span class='line'>2</span>
@@ -184,12 +174,11 @@ that’s all you need. You can add empty parentheses if you’d like, but they�
 </div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
 </div></code></pre></td></tr></table></div>
 
-<p>A couple of other tricks to spot here. One is that we’re calling the method without parentheses again. If it’s obvious what you’re doing, the parentheses are optional. The other trick is the default parameter <code>World</code>. What this is saying is “If the name isn’t supplied, use the default name of <code>"World"</code>”.</p>
+<p>Вы можете заметить здесь несколько примеров использования. Первое это то, что мы вызываем метод без скобок. Если код очевидный, их использование необязательно. Другой, то что мы присваиваем параметр <code>World</code> по умолчанию. Таким образом, если имя не будет определенно для метода, по умолчанию он воспользуется именем <code>"World"</code>.</p>
 
-<h2>Evolving Into a Greeter</h2>
+<h2>Эволюция в Приветствие</h2>
 
-<p>What if we want a real greeter around, one that remembers your name and welcomes you and treats you always with respect. You might want to use
-an object for that. Let’s create a “Greeter” class.</p>
+<p>Что если мы хотим сделать настоящее приветствие, которое запомнит ваше имя, и будет приветствовать вякий раз и относится с уважением? Вы должны использовать объекты для этого. Давайте попробуем создать наш первый “Greeter” класс.</p>
 
 <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
 <span class='line'>2</span>
@@ -217,9 +206,9 @@ an object for that. Let’s create a “Greeter” class.</p>
 </div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
 </div></code></pre></td></tr></table></div>
 
-<p>The  new keyword here is <code>class</code>. This defines a new class called <code>Greeter</code> and a bunch of methods for that class. Also notice <code>`name</code>. This is an instance variable, and is available to all the methods of the class. As you can see it’s used by <code>say_hi</code> and <code>say_bye</code>.</p>
+<p>Новое слово для нас <code>class</code>. Данный код определяет новый класс с именем <code>Greeter</code> и содержит несколько методов для него. Так же обратите внимание на <code>@name</code>. Это экземпляр переменной, которая доступна для всех методов класса. Как вы успели заметить, <code>say_hi</code> и <code>say_bye</code> ее используют во всю.</p>
 
-<p>So how do we get this Greeter class set in motion? <a href="../3">create an object</a>.</p>
+<p>Так как же нам привести данный класс в движение? <a href="../3">Cоздание объекта</a>.</p>
 
   
 </article>
@@ -231,185 +220,6 @@ an object for that. Let’s create a “Greeter” class.</p>
     
 
 
-
-<section id="menus">
-  <div class="menu-title">
-    <span>Get started</span>
-    the easy way
-  </div>
-  <ul class="nav">
-  
-  
-    
-      
-    
-
-    
-    
-
-    <li class="first  ">
-      <a class="" href="/ruby-lang.org/http://tryruby.org">Try Ruby! (in your browser)</a>
-      
-    </li>
-  
-  
-    
-
-    
-    
-
-    <li class="  ">
-      <a class="" href="/ruby-lang.org/en/downloads">Download Ruby</a>
-      
-    </li>
-  
-  
-    
-
-    
-    
-
-    <li class="  ">
-      <a class="" href="/ruby-lang.org/en/documentation/quickstart">Ruby in 20mn</a>
-      
-    </li>
-  
-  
-    
-
-    
-    
-
-    <li class="  last">
-      <a class="" href="/ruby-lang.org/en/documentation/ruby-from-other-languages">Ruby from other languages</a>
-      
-    </li>
-  
-  </ul>
-</section>
-
-<section id="menus">
-  <div class="menu-title">
-    <span>Explore</span>
-    a new world…
-  </div>
-  <ul class="nav">
-  
-  
-    
-
-    
-    
-
-    <li class="first  ">
-      <a class="" href="/ruby-lang.org/en/documentation">Documentation</a>
-      
-    </li>
-  
-  
-    
-      
-    
-
-    
-    
-
-    <li class="  ">
-      <a class="" href="/ruby-lang.org/http://www.amazon.com/s/ref=sr_nr_n_5?ie=UTF8&rs=1000&keywords=Ruby&rh=i%3Aaps%2Ck%3ARuby%2Ci%3Astripbooks%2Cn%3A1000%2Cn%3A5">Books</a>
-      
-    </li>
-  
-  
-    
-
-    
-    
-
-    <li class="  ">
-      <a class="" href="/ruby-lang.org/en/Libraries">Libraries</a>
-      
-    </li>
-  
-  
-    
-
-    
-    
-
-    <li class="  last">
-      <a class="" href="/ruby-lang.org/en/documentation/success-stories">Success Stories</a>
-      
-    </li>
-  
-  </ul>
-</section>
-
-<section id="menus">
-  <div class="menu-title">
-    <span>Participate</span>
-    in a friendly and growing community
-  </div>
-  <ul class="nav">
-  
-  
-    
-
-    
-    
-
-    <li class="first  ">
-      <a class="" href="/ruby-lang.org/en/community/mailing-lists">Mailing lists</a>
-      <span>Talk about Ruby with programmers from all around the world.</span>
-    </li>
-  
-  
-    
-
-    
-    
-
-    <li class="  ">
-      <a class="" href="/ruby-lang.org/en/community/user-groups">User groups</a>
-      <span>Get in contact with Rubyists in your area.</span>
-    </li>
-  
-  
-    
-
-    
-    
-
-    <li class="  ">
-      <a class="" href="/ruby-lang.org/en/community/weblogs">Blogs</a>
-      <span>Read about what’s happening right now in the Ruby community.</span>
-    </li>
-  
-  
-    
-
-    
-    
-
-    <li class="  ">
-      <a class="" href="/ruby-lang.org/en/community/ruby-core">Ruby Core</a>
-      <span>Help polish the rough edges of the latest Ruby.</span>
-    </li>
-  
-  
-    
-      
-    
-
-    
-    
-
-    <li class="  last">
-      <a class="" href="/ruby-lang.org/http://redmine.ruby-lang.org">Issue tracker</a>
-      <span>Report or help solve issues in Ruby.</span>
-    </li>
-  
-  </ul>
-</section>
 
 <section>
   <h1>Recent Posts</h1>
@@ -433,27 +243,13 @@ an object for that. Let’s create a “Greeter” class.</p>
 <nav role=navigation>
 
 
-<a class="to-home" href="/ruby-lang.org/en"><img class="logo" src="/ruby-lang.org/images/ruby.png" /></a>
+<a class="to-home" href="/ruby-lang.org/ru"><img class="logo" src="/ruby-lang.org/images/ruby.png" /></a>
 <ul role=main-navigation>
-  
-  <li><a href="/ruby-lang.org/en/downloads/">Downloads</a></li>
-  
-  <li><a href="/ruby-lang.org/en/documentation/">Documentation</a></li>
-  
-  <li><a href="/ruby-lang.org/en/libraries/">Libraries</a></li>
-  
-  <li><a href="/ruby-lang.org/en/community/">Community</a></li>
-  
-  <li><a href="/ruby-lang.org/en/news/">News</a></li>
-  
-  <li><a href="/ruby-lang.org/en/security/">Security</a></li>
-  
-  <li><a href="/ruby-lang.org/en/about/">About Ruby</a></li>
   
 </ul>
 
 </nav>
-<a href="/ruby-lang.org/en/credits">Credits</a>
+<a href="/ruby-lang.org/ru/credits"></a>
 
 </footer>
 </body>
